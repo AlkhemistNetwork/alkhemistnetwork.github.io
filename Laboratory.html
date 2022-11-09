@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alkhemist Network</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    
+          <label class="check" id="checkMain" for="check"><img src="menu.png" alt="" width="50px" class="logo-menu"></label>
+          <input type="checkbox"  id="check">
+        
+        
+          <section class="sidebar" id="sidebar">
+            <label class="check" for="check"><img src="menu.png" alt="" width="50px" class="logo-menu"></label>
+            <a href="index.html">
+              <section class="title-container">
+                <img src="mainLogo.gif" width="50px" alt="logo" />
+                <h1 class="mainTitle" data-hover="Home">Alkhemist Network</h1>
+              </section>
+            </a>
+            
+            <section class="links-container">
+              <div class="links">
+                <a class="nav" data-hover="ERC721" href="Alkhemist.html">Alkhemist</a>
+              </div>
+              <div class="links">
+                <a class="nav" data-hover="ERC20" href="Elixir.html">Elixir ($ELXR)</a>
+              </div>
+              <div class="links">
+                <a class="nav" data-hover="Staking" href="MagnumOpus.html">Magnum Opus</a>
+              </div>
+              <div class="links">
+                <a class="nav" data-hover="Lottery" href="CeremonyOfFate.html">Ceremony Of Fate</a>
+              </div>
+              <div class="links">
+                <a class="nav" data-hover="RFI Token Mint Portal" href="Laboratory.html">Laboratory</a>
+              </div>
+              <div class="links">
+                <a class="nav" data-hover="DAO" href="OrderOfTheSquaredCircle.html">Order Of The Squared Circle</a>
+              </div>
+              <div class="infoBox sideb">
+                <h1 class="infoText">Current Block</h1>
+                <h1 id="blockNumber" class="infoOutput">- - - - - - - - -</h1>
+              </div>
+              <div class="socials sidebar">
+                <div class="partners">
+                  <h3 class="partnersTitle">As Seen On</h3>
+                  
+                    <img width="100px" src="nft_calendar.svg" alt="">
+                  
+                  </div>
+
+      
+                  <a target="_blank" href="https://www.youtube.com/channel/UCv5SexEToD1BPiyn3XDGg1Q"><img class="gab2" src="youtube.png" alt=""></a>
+                  <a target="_blank" href="https://gab.com/AlkhemistNetwork"><img class="gab2" src="gab.png" alt=""></a>
+        
+                  <a target="_blank" href="https://odysee.com/@AlkhemistNetwork:6"><img class="gab2" src="odysee.png" width="64px" alt=""></a>
+                  <a target="_blank" href="https://discord.gg/WxX2gBQ2zg"><img class="gab2" src="discord.png" alt=""></a>
+                  <a target="_blank" href="https://t.me/alkhemistnetwork"><img class="gab2" src="telegram.png" width="64px" alt=""></a>
+                  <a target="_blank" href="https://rumble.com/c/c-1962954"><img class="gab2" src="rumble.png" width="64px" alt=""></a>
+                </div>
+            </section>
+          </section>
+        
+    <section id="main-dashboard-content">
+      <div>
+        <h4 class="walletAdd"><span id="wallet-address" class="show-account"></span></h4>
+        <button class="wallet-button" onclick="connectWallet()">Connect Wallet</button>
+        <label class="check" for="check"><img src="menu.png" alt="" width="50px" class="logo-menu"></label>
+        <a href="index.html">
+          <section class="title-container2">
+            <img class="logo2" src="mainLogo.gif" alt="logo" />
+            <h1 class="mainTitle" data-hover="Home">Alkhemist Network</h1>
+          </section>
+        </a>
+        
+      </div> 
+      <h1 id="welcome-title">Laboratory</h1>
+      <section id="grid-container">
+        <div class="grid-item lab">
+
+          <button onclick="approveFactory()">Approve 1 ELXR</button>
+          <div class="labBox">
+            <div class="labInputContainer one">
+              <div class="labInputBox">
+                <h3 class="labInputTitle">Tax Fee</h3>
+                <input class="labInput" type="number" name="tax" value="0" min="0" max="100">
+            </div>
+            <div class="labInputBox">
+                <h3 class="labInputTitle">Liquidity Fee</h3>
+                <input class="labInput" type="number" name="liquidity" value="0" min="0" max="100">
+            </div>
+            <div class="labInputBox">
+                <h3 class="labInputTitle">Burn Fee</h3>
+                <input class="labInput" type="number" name="burn" value="0" min="0" max="100">
+            </div>
+            <div class="labInputBox">
+                <h3 class="labInputTitle">Dev Fee</h3>
+                <input class="labInput" type="number" name="dev" value="0" min="0" max="100">
+            </div>
+            </div>
+            <div class="labInputContainer two">
+              <div class="labInputBox">
+                <h3 class="labInputTitle">Name</h3>
+                <input class="labInput" type="text" id="name" name="name" placeholder="Enter Token Name">
+            </div>
+            <div class="labInputBox">
+                <h3 class="labInputTitle">Symbol</h3>
+                <input class="labInput" type="text" id="symbol" name="symbol" placeholder="Enter Token Symbol">
+            </div>
+            <div class="labInputBox">
+                <h3 class="labInputTitle">Supply</h3>
+                <input class="labInput" type="text" name="supply"  min="1000000000000000" placeholder="Enter Supply Amount">
+            </div>
+            <div class="labInputBox">
+                <h3 class="labInputTitle">Dev Address</h3>
+                <input class="labInput" type="text" id="devAddress" name="devAddress" placeholder="Enter Dev Address">
+            </div>
+            </div>
+            
+        </div>
+        <button onclick="createToken()">Create DEFI Token</button>
+
+
+
+        </div>
+      </section>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js" type="text/javascript"></script>
+  </body>
+</html>

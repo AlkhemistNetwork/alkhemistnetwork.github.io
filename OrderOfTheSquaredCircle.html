@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alkhemist Network</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    
+          <label class="check" id="checkMain" for="check"><img src="menu.png" alt="" width="50px" class="logo-menu"></label>
+          <input type="checkbox"  id="check">
+        
+        
+          <section class="sidebar" id="sidebar">
+            <label class="check" for="check"><img src="menu.png" alt="" width="50px" class="logo-menu"></label>
+            <a href="index.html">
+              <section class="title-container">
+                <img src="mainLogo.gif" width="50px" alt="logo" />
+                <h1 class="mainTitle" data-hover="Home">Alkhemist Network</h1>
+              </section>
+            </a>
+            
+            <section class="links-container">
+              <div class="links">
+                <a class="nav" data-hover="ERC721" href="Alkhemist.html">Alkhemist</a>
+              </div>
+              <div class="links">
+                <a class="nav" data-hover="ERC20" href="Elixir.html">Elixir ($ELXR)</a>
+              </div>
+              <div class="links">
+                <a class="nav" data-hover="Staking" href="MagnumOpus.html">Magnum Opus</a>
+              </div>
+              <div class="links">
+                <a class="nav" data-hover="Lottery" href="CeremonyOfFate.html">Ceremony Of Fate</a>
+              </div>
+              <div class="links">
+                <a class="nav" data-hover="RFI Token Mint Portal" href="Laboratory.html">Laboratory</a>
+              </div>
+              <div class="links">
+                <a class="nav" data-hover="DAO" href="OrderOfTheSquaredCircle.html">Order Of The Squared Circle</a>
+              </div>
+              <div class="infoBox sideb">
+                <h1 class="infoText">Current Block</h1>
+                <h1 id="blockNumber" class="infoOutput">- - - - - - - - -</h1>
+              </div>
+              <div class="socials sidebar">
+                <div class="partners">
+                  <h3 class="partnersTitle">As Seen On</h3>
+                  
+                    <img width="100px" src="nft_calendar.svg" alt="">
+                  
+                  </div>
+
+      
+                  <a target="_blank" href="https://www.youtube.com/channel/UCv5SexEToD1BPiyn3XDGg1Q"><img class="gab2" src="youtube.png" alt=""></a>
+                  <a target="_blank" href="https://gab.com/AlkhemistNetwork"><img class="gab2" src="gab.png" alt=""></a>
+        
+                  <a target="_blank" href="https://odysee.com/@AlkhemistNetwork:6"><img class="gab2" src="odysee.png" width="64px" alt=""></a>
+                  <a target="_blank" href="https://discord.gg/WxX2gBQ2zg"><img class="gab2" src="discord.png" alt=""></a>
+                  <a target="_blank" href="https://t.me/alkhemistnetwork"><img class="gab2" src="telegram.png" width="64px" alt=""></a>
+                  <a target="_blank" href="https://rumble.com/c/c-1962954"><img class="gab2" src="rumble.png" width="64px" alt=""></a>
+                </div>
+            </section>
+          </section>
+        
+    <section id="main-dashboard-content">
+      <div>
+        <h4 class="walletAdd"><span id="wallet-address" class="show-account"></span></h4>
+        <button class="wallet-button" onclick="connectWallet()">Connect Wallet</button>
+        <label class="check" for="check"><img src="menu.png" alt="" width="50px" class="logo-menu"></label>
+        <a href="index.html">
+          <section class="title-container2">
+            <img class="logo2" src="mainLogo.gif" alt="logo" />
+            <h1 class="mainTitle" data-hover="Home">Alkhemist Network</h1>
+          </section>
+        </a>
+        
+      </div> 
+      <h1 id="welcome-title">Order Of The Squared Circle</h1>
+      <section id="grid-container">
+
+        <div class="grid-item delegate">
+          <h1 class="daoActionTitle">Delegate yourself or an other address to create, manage and vote on proposals</h1>
+          <div class="daoButtonBox">
+            <input class="daoInput buttonInput" type="text" id="delegateeAddress" name="delegateeAddress" placeholder="Enter Delegatee Address">
+      
+            <button id="polyscan" onclick="delegateVotes()">Delegate</button>
+          
+           </div>
+        </div>
+
+        <div class="grid-item propose">
+
+
+          <h1 class="daoActionTitle">CREATE A PROPOSAL</h1>
+
+					<div class="daoOutputContainer">
+
+						<div class="infoBox">
+							<h1 class="infoText"  name="proposalIDResult">Proposal ID</h1>
+							<h1 class="infoOutput" id="proposalIDResult" >- - - - - - - - -</h1>
+						</div>
+
+						
+				
+						<div class="infoBox">
+							<h1 class="infoText">Block Start</h1>
+							<h1 class="infoOutput" id="blockStart">- - - - - - - - -</h1>
+						</div>
+				
+						<div class="infoBox">
+							<h1 class="infoText">Block End</h1>
+							<h1 class="infoOutput" id="blockEnd">- - - - - - - - -</h1>
+						</div>
+
+					</div>
+
+					<div class="daoInputContainer">
+						<div class="daoInputBox">
+							<h3 class="infoText">Targets</h3>
+							<input class="daoInput" type="text" name="pTargets" id="pTargets" placeholder="Enter Target Address">
+						</div>
+						<div class="daoInputBox">
+							<h3 class="infoText">Values</h3>
+							<input class="daoInput" type="text" name="pValue" id="pValue" placeholder="Enter Amount Value">
+						</div>
+						<div class="daoInputBox">
+							<h3 class="infoText">Calldatas</h3>
+							<input class="daoInput" type="text" name="pCalldatas" id="pCalldatas" placeholder="Enter Function Calldata">
+						</div>
+						<div class="daoInputBox">
+							<h3 class="infoText">Description</h3>
+							<input class="daoInput" type="text" name="pDescription" id="pDescription" placeholder="Enter Description">
+						</div>
+						
+						<button onclick="createProposal()">Create Proposal</button>
+			
+					</div>
+
+        </div>
+
+
+
+        <div class="grid-item vote">
+
+
+          <h1 class="daoActionTitle">VOTE ON A PROPOSAL</h1>
+            <div class="daoOutputContainer">
+					
+						<div class="info-box">
+							<h1 class="infoText">State</h1>
+							<h1 class="infoOutput" id="state">- - - - - - - - -</h1>
+						</div>
+						
+						<div class="info-box">
+							<h1 class="infoText">Voted</h1>
+							<h1 class="infoOutput" id="voted">- - - - - - - - -</h1>
+						</div>
+						
+							
+				</div>
+				<div class="daoButtonBox">
+				<input class="daoInput buttonInput" type="text" id="proposalInfo" placeholder="Enter Proposal ID">
+				<button onclick="proposalInfo()">Get Info</button>
+			</div>
+				<div class="daoButtonBox">
+					<input class="daoInput buttonInput" type="text" id="pID" name="pID" placeholder="Enter Proposal ID">
+          <div class="voteLabelBox">
+          <label for="pvote">Vote 0, 1 or 2</label>
+					<input class="daoInput" type="number" name="pVote"  min="0" max="2" value="2" id="pvote">
+          </div>
+          
+					<button onclick="submitVote()">Cast Vote</button>
+				</div>
+        </div>
+
+
+
+
+
+
+          <div class="grid-item manage">
+
+
+            <h1 class="daoActionTitle">MANAGE A PROPOSAL</h1>
+
+            <div class="infoBox">
+              <h1 class="infoText">State</h1>
+              <h1 id="_state" class="infoOutput">- - - - - - - - -</h1>
+            </div>
+            <div class="daoButtonBox">
+              <input class="daoInput buttonInput" type="text" id="_getPropId" placeholder="Enter Proposal ID">
+              <button onclick="getState()">Get Info</button>
+            </div>
+  
+          <div class="daoInputContainer">
+            <div class="daoInputBox">
+              <h3 class="infoText">Targets</h3>
+              <input class="daoInput" type="text" id="PTargets" placeholder="Enter Target Address">
+            </div>
+            <div class="daoInputBox">
+              <h3 class="infoText">Values</h3>
+              <input class="daoInput" type="text" id="PValue" placeholder="Enter Amount Value">
+            </div>
+            <div class="daoInputBox">
+              <h3 class="infoText">Calldatas</h3>
+              <input class="daoInput" type="text" id="PCalldatas" placeholder="Enter Function Calldata">
+            </div>
+            <div class="daoInputBox">
+              <h3 class="infoText">DescriptionHash</h3>
+              <input class="daoInput" type="text" id="PDescription" placeholder="Enter DescriptionHash">
+            </div>
+            <div>
+            <button onclick="Queue()">Queue Proposal</button>
+            <button onclick="Execute()">Execute Proposal</button>
+      
+            </div>
+            
+          </div>
+  
+  
+            </div>
+
+
+
+          </div>
+
+
+        
+      </section>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js" type="text/javascript"></script>
+  </body>
+</html>

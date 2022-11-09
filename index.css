@@ -1,0 +1,741 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  background: rgb(8, 8, 8);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Gruppo', cursive;
+  color: rgb(200,0,255);
+}
+h1, h2, h3, h4, h5, button {
+  font-family: 'Gruppo', cursive;
+  text-transform: uppercase;
+  
+}
+input {
+  text-align: center;
+}
+
+#sidebar {
+  background-color: black;
+  min-width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.title-container h1 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.mainTitle,  .title, .show-account {
+  background: linear-gradient(to right, rgb(200,0,255), purple, aqua);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mainTitle:hover {
+  font-size: 0;
+  
+}
+.mainTitle:hover:after {
+  content: attr(data-hover);
+  font-size: 18px;
+  color:  aqua;
+  margin-left: 50px;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.links {
+  display: flex;
+  align-items: center;
+  margin: 11px;
+  height: 48px;
+  width: 260px;
+  justify-content: center;
+}
+
+.nav:hover {
+  font-size: 0 !important;
+}
+.nav:hover:after{
+  content: attr(data-hover);
+  font-size: 16px;
+  color:  aqua;
+}
+a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+button {
+  margin: 15px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: black;
+  color: white;
+  padding: 8px;
+  min-width: 150px;
+  background-image: linear-gradient(to right, rgb(200,0,255), purple, aqua);
+  cursor: pointer;
+}
+
+button:hover {
+  color: aqua;
+  font-style:inherit;
+}
+.mintBox {
+  background-color: rgb(20, 20, 20);
+  border-radius: 5px;
+}
+.nftImg {
+  background-color: rgb(20, 20, 20);
+}
+
+.linkButton {
+  margin: 15px;
+  background-image: linear-gradient(to right, rgb(200,0,255), purple, aqua);
+  border-style: solid;
+  border-radius: 5px;
+  border-color: black;
+  color: white;
+  padding: 8px;
+  width: 175px;
+}
+.linkAddress:hover {
+  color: aqua;
+}
+
+
+.links span {
+  padding: 0px 20px;
+}
+.infoBox {
+  text-align: center;
+  width: max-content;
+}
+#main-dashboard-content {
+  margin-left: 300px;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 20px 25px;
+  background: rgb(8, 8, 8);
+}
+ .labInputBox, .lotteryRegisterBox, .stakingBox, .indexInfo, .daoButtonBox, .infoBox, .lotteryInfo, .daoInputContainer, .info-box {
+  background-color: rgb(20, 20, 20);
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgb(200,0,255);
+  padding: 10px;
+}
+.infoBox.sideb {
+  background-color: black;
+  border-style: none;
+  border-radius: 0px;
+  }
+.daoInput.buttonInput {
+  margin-left: 15px;
+}
+.daoButtonBox {
+  margin: 10px;
+}
+.daoOutputContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.daoInputContainer {
+  min-width: 400px;
+}
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+  padding: 15px 25px;
+  border-radius: 15px;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.input-box i {
+  color: #5f5f5f;
+}
+.infoText {
+  font-size: 17px;
+}
+
+
+#welcome-title {
+  font-size: 24px;
+  font-weight: lighter;
+  margin: 20px 5px;
+  color: rgb(200,0,255);
+  text-transform: uppercase;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 75% auto;
+  grid-gap: 25px;
+  background: rgb(8, 8, 8);
+  min-width: 100%;
+}
+.grid-item {
+  height: 500px;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  box-sizing: border-box;
+  padding: 50px;
+  background: #171717;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgb(200,0,255);
+  width: -webkit-fill-available;
+}
+.grid-item.lottery {
+  flex-direction: column;
+  background-image: url(purpsmoke.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.grid-item.vote {
+  flex-direction: column;
+  height: fit-content;
+  background-image: url(purpsmoke.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.grid-item.propose {
+  flex-direction: column;
+  background-image: url(purpsmoke.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: fit-content;
+}.grid-item.manage {
+  flex-direction: column;
+  height: fit-content;
+  background-image: url(purpsmoke.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.grid-item.delegate {
+  flex-direction: column;
+  height: fit-content;
+  background-image: url(purpsmoke.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.grid-item.promo {
+  flex-direction: column;
+  background-image: url(purpsmoke.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.grid-item.about {
+  flex-direction: column;
+  height: fit-content;
+  background-color: rgb(8, 8, 8);
+}
+.socials {
+  
+  width: 100%;
+  padding: 0px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgb(200,0,255);
+  background-image: url(purpsmoke.jpg);
+  baackground-color: rgb(152, 3, 194);
+  flex-wrap: wrap;
+} 
+.promoBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.grid-item.nftDisplay {
+  height: fit-content;
+  justify-content: center;
+  text-transform: uppercase;
+  flex-direction: column;
+  background-color: rgb(8, 8, 8);
+}
+.voteLabelBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+
+.grid-item.lab {
+  flex-wrap: wrap;
+  background-image: url(purpsmoke.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: fit-content;
+}
+.grid-item.one {
+  background-image: url(purpsmoke.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.title, .promoTitle {
+  margin: 20px;
+}
+.promoTitle {
+  font-size: 18px;
+}
+p {
+  color: #fff;
+}
+.aboutTitle {
+  margin-bottom: 15px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  font-size: 22px;
+  color: aqua;
+}
+.indexInfo {
+  margin: 50px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgb(200,0,255);
+  padding: 100px;
+  min-width: 500px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+
+.daoInfoBox {
+  display: flex;
+}
+.wallet-button {
+  cursor: pointer;
+  float: right;
+}
+.daoOutputContainer {
+  display: flex;
+}
+.daoButtonBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+.daoInputContainer {
+  margin: 10px;
+}
+.daoInputBox {
+  margin: 5px;
+}
+
+.daoInput {
+  margin-top: 5px;
+}
+.daoActionTitle {
+  margin-bottom: 15px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  font-size: 22px;
+  color: aqua;
+}
+.video {
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgb(200,0,255);
+}
+.nftImg {
+  min-height: 100px;
+  min-width: 100px;
+  padding: 10px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgb(200,0,255);
+  scale: 75%;
+}
+.imgtoken {
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+}
+.idtoken {
+  color: #fff;
+}
+
+.nfts{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nfts-t {
+  width: fit-content;
+  
+  
+}
+.mint {
+  padding: 10px;
+  border-style: solid;
+  border-color: rgb(200,0,255);
+  border-radius: 5px;
+}
+.minter {
+  padding: 5px;
+}
+
+.infoOutput {
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  min-width: 150px;
+  border-style: solid;
+  border-color: rgb(200,0,255);
+  color: white;
+}
+.lotteryBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.labInput {
+  margin: 7px;
+}
+.labBox {
+  display: flex;
+}
+.labInputTitle {
+  padding: 10px;
+}
+.labInputContainer {
+  padding: 10px;
+  
+  min-width: 130px;
+  
+}
+.promoInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(8, 8, 8);
+  background-size: cover;
+  padding: 30px;
+  padding-right: 40px;
+  border-style: solid;
+  border-color: rgb(200,0,255);
+  border-radius: 10px; 
+  background-image: url(AlkhemistNetworkPromo.mp4);
+    
+}
+.promoButtonBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.inputBox.lottery {
+  margin-right: 15px;
+}
+.logo-menu {
+  max-height: 50px;
+  max-width: 50px;
+  display: block;
+  color: #fff;  
+}
+#check {
+  display: none;
+}
+.check {
+  display: none;
+}
+
+#checkMain {
+  display: none;
+}
+.collectionTitle {
+  color: aqua;
+}
+
+.InfoText {
+  color: aqua;
+}
+.gab {
+margin: 10px;
+
+}
+.gab2 {
+  margin: 20px;
+  display: none;
+}
+.title-container2 {
+  display: none;
+
+}
+.walletAdd {
+  text-align: right;
+  margin: 10px;
+}
+.nav {
+  border-style: solid;
+    border-color: rgb(200,0,255);
+    border-radius: 10px;
+    margin: 0px;
+    padding: 10px;
+    min-width: -webkit-fill-available;
+    text-align: center;
+}
+
+.partners {
+  margin: 10px;
+}
+.partnersTitle {
+  color: aqua;
+}
+.socials.sidebar {
+  display: none;
+}
+
+.grid-item.social {
+  background-color: rgb(8, 8, 8);
+  height: fit-content;
+  
+}
+
+.cards {
+  border: solid;
+  border-color: rgb(200,0,255);
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+.cardImg {
+  margin-top: 30px;
+} 
+@media (max-width: 1400px) {
+  #grid-container {
+    grid-template-columns: 100%;
+    justify-items: center;
+  }
+  
+}
+@media (max-width: 1115px) {
+  
+  .sidebar {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  
+}
+
+@media (max-width: 900px) {
+  
+
+ 
+  .title-container h1 {
+    display: block;
+  }
+  .socials.sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    border-radius: 20px;
+    min-width: 280px;
+  }
+
+
+  .infoBox.sideb {
+    background-color: rgb(8, 8, 8);
+  }
+  #gridItemElixir {
+    flex-wrap: wrap;
+  }
+  #gridItemStaking {
+    flex-direction: column;
+  }
+ 
+  .title-container2 {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    align-items: center;
+    font-size: 30px;
+  } 
+  .logo2 {
+    width: 100px;
+  }
+
+  .nav {
+    font-size: 24px;
+    
+  }
+
+  .walletAdd {
+    text-align: right;
+  }
+  #welcome-title {
+    display: flex;
+    margin-left: 20px;
+  }
+  .gab2 {
+    display: block;
+  }
+  
+  .links span {
+    display: none;
+  }
+  .check {
+    display: block;
+    margin: 10px;
+    margin-left: 500px;
+}
+.links {
+  margin: 11px;
+  margin-bottom: 20px;
+  width: -webkit-fill-available;
+}
+
+.top-section {
+  float: left;
+}
+
+
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  top: 0px;
+  align-items: center;
+  position: fixed;
+  background-color: rgb(8, 8, 8);
+  z-index: 1;
+  left: 0%;
+  text-align: center;
+  display: block;
+  height: -webkit-fill-available;
+}
+
+ #grid-container {
+  height: -webkit-fill-available;
+ }
+  
+
+  #check:checked + .sidebar {
+  display: none;
+  }
+  #main-dashboard-content {
+    margin-left: 0px;
+    width: fit-content;
+    padding: 0;
+  }
+  .title-container {
+    padding: 20px;
+    justify-content: center;
+    margin-right: 20px;
+    scale: 2;
+    margin-bottom: 50px;
+  }
+  
+  .grid-item {
+    width: 600px;
+   scale: .95;
+   height: 100%;
+  }
+
+   .grid-item.lottery {
+    flex-direction: column;
+    width: -webkit-fill-available;
+}
+.grid-item.nftDisplay {
+  height: -webkit-fill-available;
+}
+.grid-item.one {
+  height: -webkit-fill-available;
+}
+
+.grid-item.lab {
+  flex-direction: column;
+  width: -webkit-fill-available;
+}
+}
+
+@media (max-width: 950px) and (orientation: landscape) {
+  #main-dashboard-content {
+    width: 100% !important;
+  }
+  .check {
+    margin-left: 0px;
+    float: right;
+  }
+.aTitle {
+  width: 100%;
+}
+.grid-item {
+    width: -webkit-fill-available;
+}
+
+.topSection {
+  width: 100vw;
+  width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+#grid-container {
+  justify-items: center;
+}
+.title-container2 {
+  margin: 0px;
+}
+
+.wallet-button {
+  margin: 0 10px;
+}
+  }
